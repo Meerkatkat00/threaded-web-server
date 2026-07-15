@@ -1,0 +1,2 @@
+A cute sample text file.
+It's served by the socket web server!

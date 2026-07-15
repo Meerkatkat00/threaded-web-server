@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Tests</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <main>
+        <h1>Server Tests</h1>
+
+        <p>
+            list of the main URLs used to test the server.
+        </p>
+        <ul>
+            <li><code>/index.html</code> returns the home page.</li>
+            <li><code>/pages/info.html</code> returns a file from a sub-folder.</li>
+            <li><code>/files/demo.txt</code> returns a text file.</li>
+            <li><code>/whatever.html</code> returns 404 Not Found.</li>
+            <li><code>/pages/</code> returns 400 Bad Request.</li>
+        </ul>
+        <nav>
+            <a href="/index.html">Back to home</a>
+            <a href="/pages/info.html">View server info</a>
+        </nav>
+    </main>
+</body>
+</html>
