@@ -17,9 +17,8 @@ It supports basic HTTP responses such as 200 OK, 400 Bad request, and 404 Not fo
 - Uses threads to handle multiple client connections
 - Sends `Content-Length` and `Content-Type` headers
 
-#Project structure
-```text
-Pythonwork/
+# Project structure
+connections/
     server.py
     README.md
     static/
@@ -42,18 +41,18 @@ The server will run at:
 http://localhost:8080
 
 
-## Browser Tests
+# Browser Tests
 
 Open these URLs in a browser:
 
 http://localhost:8080/
 http://localhost:8080/index.html
 http://localhost:8080/pages/info.html
-http://localhost:8080/pages/tests.html
+http://localhost:8080/pages/testpage.html
 http://localhost:8080/files/demo.txt
 
 
-##Curl tests
+# Curl tests
 
 Testing a regular HTML file:
 
@@ -85,9 +84,7 @@ Test a missing file:
 
 curl.exe -v http://localhost:8080/whatever.html
 
-
 Expected result:
-
 HTTP/1.0 404 Not Found
 
 Test directory access:
@@ -98,12 +95,18 @@ curl.exe -v http://localhost:8080/pages/
 Expected result:
 HTTP/1.0 400 Bad Request
 
-
 Test directory traversal blocking:
 
-bash
-curl.exe -v --path-as-is http://localhost:8080/../secret.txt
 
+curl.exe -v --path-as-is http://localhost:8080/../secret.txt
 Expected result:
+HTTP/1.0 400 Bad Request
+
+
+video test link:
+https://drive.google.com/file/d/1mo-xlTcKooEkO-NtSLeOU4iEUmHQpVHm/view?usp=drivesdk
+
+
+
 HTTP/1.0 400 Bad Request
 
